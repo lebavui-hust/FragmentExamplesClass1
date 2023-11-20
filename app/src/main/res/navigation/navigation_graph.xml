@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/blankFragment">
+
+    <fragment
+        android:id="@+id/blankFragment"
+        android:name="vn.edu.hust.fragmentexamples.BlankFragment"
+        android:label="fragment_blank"
+        tools:layout="@layout/fragment_blank" >
+        <action
+            android:id="@+id/action_blankFragment_to_redFragment"
+            app:destination="@id/redFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/redFragment"
+        android:name="vn.edu.hust.fragmentexamples.RedFragment"
+        android:label="fragment_red"
+        tools:layout="@layout/fragment_red" >
+        <action
+            android:id="@+id/action_redFragment_to_blueFragment"
+            app:destination="@id/blueFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/blueFragment"
+        android:name="vn.edu.hust.fragmentexamples.BlueFragment"
+        android:label="fragment_blue"
+        tools:layout="@layout/fragment_blue" />
+</navigation>
